@@ -7,11 +7,13 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const homeRoutes = require("./routes/homeRoutes");
+const regRoutes = require("./routes/regRoutes");
 
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/views"));
+// dont need rn
 // app.use(
 //     ({
 //         secret: process.env.USERNAME,
@@ -21,6 +23,7 @@ app.use(express.static(__dirname + "/views"));
 // )
 
 app.use("/", homeRoutes);
+app.use("/register", regRoutes);
 
 const start = async () => {
   try {

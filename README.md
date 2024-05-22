@@ -23,6 +23,12 @@ This is a simple e-commerce shop project.
    npm install
    ```
 
+3. Set up the MongoDB database:
+
+   - Install MongoDB on your machine if you haven't already.
+   - Create a new MongoDB database for the shop project.
+   - Update the database connection configuration in the `.env` file.
+
 ## Usage
 
 1. Start the development server:
