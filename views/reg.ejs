@@ -18,12 +18,25 @@
         <p class="error"><%= error %></p>
         <% } %>
         <form action="/register" method="post">
-          <input type="text" name="username" placeholder="Username" required />
-          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            value="<%= username %>"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value="<%= email %>"
+            required
+          />
           <input
             type="password"
             name="password"
             placeholder="Password"
+            value="<%= password %>"
             required
           />
           <button type="submit">Register</button>
