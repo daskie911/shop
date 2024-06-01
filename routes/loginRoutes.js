@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
     req.session.user = userExists; 
     req.session.isAuthenticated = true;
     await req.session.save();
-    res.redirect("/");
+    res.redirect("/profile");
   } catch (error) {
     console.log(error);
   }

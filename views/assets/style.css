@@ -1,5 +1,5 @@
     body {
-    background: linear-gradient(90deg, #4f4ff2, #6e69f1, #4f4ff2);
+    background: linear-gradient(90deg, #dc4ff2, #b869f1, #e74ff2);
     background-size: 200% 200%;
     animation: lavaLamp 5s infinite;
     font-family: Arial, sans-serif;
@@ -168,8 +168,8 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
-        0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    text-shadow: 0 0 10px #9500ff, 0 0 20px #9500ff, 0 0 30px #9500ff,
+        0 0 40px #9500ff, 0 0 50px #9500ff, 0 0 60px #9500ff, 0 0 70px #9500ff;
     animation: fadeIn 1s ease-in-out;
     }
 

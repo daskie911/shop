@@ -10,6 +10,7 @@ const homeRoutes = require("./routes/homeRoutes");
 const regRoutes = require("./routes/regRoutes");
 const loginRoutes = require("./routes/loginRoutes");
 const logOutRoutes = require("./routes/logOutRoutes");
+const profileRoutes = require("./routes/profileRoutes");
 
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
@@ -27,6 +28,7 @@ app.use("/", homeRoutes);
 app.use("/register", regRoutes);
 app.use("/login", loginRoutes);
 app.use("/logout", logOutRoutes);
+app.use("/profile", profileRoutes);
 
 const start = async () => {
   try {
