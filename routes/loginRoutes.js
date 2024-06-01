@@ -20,14 +20,17 @@ router.post("/", async (req, res) => {
       });
     }
     
-    const comparePassword = await bcrypt.compare(password, userExists.password);
+    const comparePassword = await bcrypt.compare(password, userExists.password); // compare the password
     if (!comparePassword) {
-      return res.render("login", {
+      return res.render("login", { // if password is incorrect
         error: "Invalid username or password",
         username,
-        password,x
-      });
+        password,
+      }); // render the login page with an error message
     }
+    req.session.user = userExists; 
+    req.session.isAuthenticated = true;
+    await req.session.save();
     res.redirect("/");
   } catch (error) {
     console.log(error);
