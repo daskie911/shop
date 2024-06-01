@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const homeRoutes = require("./routes/homeRoutes");
 const regRoutes = require("./routes/regRoutes");
+const loginRoutes = require("./routes/loginRoutes");
 
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
@@ -24,6 +25,7 @@ app.use(express.static(__dirname + "/views"));
 
 app.use("/", homeRoutes);
 app.use("/register", regRoutes);
+app.use("/login", loginRoutes);
 
 const start = async () => {
   try {
