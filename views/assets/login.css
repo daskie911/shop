@@ -1,110 +1,85 @@
+/* General Styles */
 body {
-  background: linear-gradient(90deg, #4f4ff2, #6e69f1, #4f4ff2);
-  background-size: 200% 200%;
-  animation: lavaLamp 5s infinite;
   font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
   margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
 }
 
-@keyframes lavaLamp {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 header h1 {
-  text-align: center;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px;
-  animation: shadowAnim 0.5s infinite ease;
+  font-size: 2.5em;
+  margin: 0;
 }
 
-@keyframes shadowAnim {
-  0% {
-    text-shadow: 0 0 10px #ffffff;
-  }
-  50% {
-    text-shadow: 0 0 20px #ffffff;
-  }
-  100% {
-    text-shadow: 0 0 10px #ffffff;
-  }
-}
-
-.container {
-  border: 2px solid white;
-  padding: 20px;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15px;
-}
-
-.container form {
-  margin-top: 20px;
-}
-
-.container button {
-  transition: transform 0.3s ease;
-  padding: 10px 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
+/* Main Container Styles */
+main .container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
   border-radius: 10px;
-}
-
-.container button:hover {
-  transform: scale(1.1);
-}
-
-.container h1 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px;
-  animation: shadowAnim 0.5s infinite ease;
+  max-width: 400px;
+  width: 100%;
 }
 
-.container form input[type="text"],
-.container form input[type="password"] {
-  width: 100%;
-  margin-top: 10px;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: transparent;
-  color: white;
+main .container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-.container form input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #6e69f1;
-  color: white;
-  cursor: pointer;
+  font-size: 1em;
 }
 
-@keyframes shadowAnim {
-  0% {
-    text-shadow: 0 0 10px white;
-  }
-  50% {
-    text-shadow: 0 0 20px white;
-  }
-  100% {
-    text-shadow: 0 0 10px white;
-  }
+form button {
+  padding: 15px;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3700b3;
+}
+
+/* Error Message Styles */
+.error {
+  color: #ff4f4f;
+  margin: 10px 0;
+}
+
+/* Link Styles */
+a {
+  color: #bb86fc;
+  text-decoration: none;
+  margin-top: 20px;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
 }

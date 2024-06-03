@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  /* Header Styles */
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Logout Button Styles */
+  form[action="/logout"] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  form[action="/logout"] input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form[action="/logout"] input[type="submit"]:hover {
+    background-color: #3700b3;
+  }
+  
+  /* Info Section Styles */
+  .info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .info span {
+    display: block;
+    font-size: 1.1em;
+  }
+  
+  /* Password Change Section Styles */
+  .passwordChange {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .passwordChange h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Form Styles */
+  .passwordChange form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .passwordChange form input {
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .passwordChange form button {
+    padding: 15px;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .passwordChange form button:hover {
+    background-color: #3700b3;
+  }
+                              

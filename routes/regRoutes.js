@@ -56,7 +56,7 @@ router.post("/", async (req, res) => {
     req.session.user = user;
     req.session.isAuthenticated = true;
     await req.session.save();
-
+  
     res.redirect("/");
   } catch (error) {
     console.log(error);

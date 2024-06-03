@@ -11,5 +11,31 @@
     <form action="/logout" method="post">
       <input type="submit" value="Log Out" />
     </form>
+    <div class="info">
+      <h2>User Info</h2>
+      Username:
+      <span><%=user.username%></span>
+      <br />
+      Email:  
+      <span><%=user.email%></span>
+    </div>
+    <div class="passwordChange">
+      <h2>Change Password</h2>
+      <form action="/changePassword" method="post">
+        <input
+          type="password"
+          name="oldPassword"
+          placeholder="Old Password"
+          required
+        />
+        <input
+          type="password"
+          name="newPassword"
+          placeholder="New Password"
+          required
+        />
+        <button type="submit">Change Password</button>
+      </form>
+    </div>
   </body>
 </html>
