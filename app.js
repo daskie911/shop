@@ -11,6 +11,7 @@ const regRoutes = require("./routes/regRoutes");
 const loginRoutes = require("./routes/loginRoutes");
 const logOutRoutes = require("./routes/logOutRoutes");
 const profileRoutes = require("./routes/profileRoutes");
+// const productRoutes = require("./routes/productRoutes");
 
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
@@ -29,6 +30,7 @@ app.use("/register", regRoutes);
 app.use("/login", loginRoutes);
 app.use("/logout", logOutRoutes);
 app.use("/profile", profileRoutes);
+// app.use("/product", productRoutes);
 
 const start = async () => {
   try {

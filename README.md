@@ -8,6 +8,7 @@ This is a simple e-commerce shop project.
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Updates](#updates)
 
 ## Installation
 
@@ -46,3 +47,9 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Updates
+
+- **[Date of Update]**: [Description of the update]
+- **[Date of Update]**: [Description of the update]
+- **[Date of Update]**: [Description of the update]

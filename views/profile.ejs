@@ -16,12 +16,16 @@
       Username:
       <span><%=user.username%></span>
       <br />
-      Email:  
+      Email:
       <span><%=user.email%></span>
     </div>
     <div class="passwordChange">
       <h2>Change Password</h2>
-      <form action="/changePassword" method="post">
+
+      <% if (error) { %>
+      <p class="error"><%= error %></p>
+      <% } %>
+      <form action="/profile/changePassword" method="post">
         <input
           type="password"
           name="oldPassword"
