@@ -13,6 +13,9 @@ const logOutRoutes = require("./routes/logOutRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 // const productRoutes = require("./routes/productRoutes");
 
+
+
+
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
