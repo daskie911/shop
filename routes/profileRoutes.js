@@ -36,9 +36,28 @@ router.post("/changePassword", async (req, res) => {
 
   // hash the new password
   const hash = await bcrypt.hash(newPassword, 12);
-  user.password = hash; 
+  user.password = hash;
   await user.save();
-  res.render("profile", { user: req.session.user, error: "Your password are changed!✅" })
+  res.render("profile", {
+    user: req.session.user,
+    error: "Your password are changed!✅",
+  });
+});
+ 
+// delete account
+router.post("/deleteAccount", async (req, res) => {
+  if (!req.session.isAuthenticated) {
+    return res.redirect("/register");
+  }
+  // find the user in the database
+  const user = await User.findOne({ email: req.session.user.email });
+  if (!user) {
+    return res.redirect("/");
+  }
+  // delete the user from the database
+  await User.deleteOne({ email: req.session.user.email }); 
+  req.session.destroy();
+  return res.redirect("/");
 });
 
 module.exports = router;
