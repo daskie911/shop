@@ -19,11 +19,15 @@
       </ul>
     </nav>
     <div class="tools">
-      <a href="/login">Log In</a>
-      <a href="/register">Sign Up</a>
+      <% if (user) { %>
+      <a href="/profile">Profile</a>
       <form action="/logout" method="post">
         <button type="submit" value="Log Out" id="logoutbutton">Log Out</button>
       </form>
+      <% } else { %>
+      <a href="/login">Log In</a>
+      <a href="/register">Sign Up</a>
+      <% } %>
     </div>
 
     <div class="main" id="main">

@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
   }
   return res.render("profile", { user: req.session.user, error: "" });
 });
+
 // change password
 router.post("/changePassword", async (req, res) => {
   if (!req.session.isAuthenticated) {
@@ -29,7 +30,7 @@ router.post("/changePassword", async (req, res) => {
   if (!comparePassword) {
     return res.render("profile", {
       user: req.session.user,
-      error: "Invalid password",
+      error: "Invalid password!❌",
     });
   }
 
