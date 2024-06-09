@@ -4,7 +4,12 @@ const router = new Router();
 const bcrypt = require("bcryptjs");
 
 router.get("/", (req, res) => {
-  res.render("login", { error: "", username: "", password: "" });
+  res.render("login", {
+    error: "",
+    username: "",
+    password: "",
+    user: req.user,
+  });
 });
 
 // login a user
@@ -19,16 +24,17 @@ router.post("/", async (req, res) => {
         password,
       });
     }
-    
+
     const comparePassword = await bcrypt.compare(password, userExists.password); // compare the password
     if (!comparePassword) {
-      return res.render("login", { // if password is incorrect
+      return res.render("login", {
+        // if password is incorrect
         error: "Invalid username or password",
         username,
         password,
       }); // render the login page with an error message
     }
-    req.session.user = userExists; 
+    req.session.user = userExists;
     req.session.isAuthenticated = true;
     await req.session.save();
     res.redirect("/profile");

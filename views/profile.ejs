@@ -7,10 +7,8 @@
     <link rel="stylesheet" type="text/css" href="/assets/profile.css" />
   </head>
   <body>
+    <%- include('header.ejs') %>
     <h1>Welcome! <% if (user) { %> <%= user.username %> <% } %></h1>
-    <form action="/logout" method="post">
-      <input type="submit" value="Log Out" />
-    </form>
     <div class="info">
       <h2>User Info</h2>
       Username:

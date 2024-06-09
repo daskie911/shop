@@ -7,28 +7,8 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <div class="logo">
-      <h1>444kuda</h1>
-    </div>
+    <%- include('header.ejs') %>
 
-    <nav>
-      <ul>
-        <li><a href="#main">MAIN</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#help">HELP</a></li>
-      </ul>
-    </nav>
-    <div class="tools">
-      <% if (user) { %>
-      <a href="/profile">Profile</a>
-      <form action="/logout" method="post">
-        <button type="submit" value="Log Out" id="logoutbutton">Log Out</button>
-      </form>
-      <% } else { %>
-      <a href="/login">Log In</a>
-      <a href="/register">Sign Up</a>
-      <% } %>
-    </div> 
 
     <div class="main" id="main">
       <h1>444</h1>
