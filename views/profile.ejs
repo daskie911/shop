@@ -51,6 +51,7 @@
             type="password"
             id="password"
             name="password"
+            placeholder="Enter your password to confirm"
             required
           /><br /><br />
           <button type="submit">Confirm Delete</button>
@@ -58,13 +59,15 @@
       </div>
     </div>
 
+    <!-- this script is used to show the modal when the delete button is clicked -->
+
     <script>
-      var modal = document.getElementById("myModal");
-      var btn = document.getElementById("deleteBtn");
-      var span = document.getElementsByClassName("close")[0];
+      var modal = document.getElementById("myModal"); // Get the modal
+      var btn = document.getElementById("deleteBtn"); // Get the button that opens the modal
+      var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
 
       btn.onclick = function () {
-        modal.style.display = "block";
+        modal.style.display = "flex";
       };
 
       span.onclick = function () {
