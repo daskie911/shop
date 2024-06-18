@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Page</title>
+    <title>Admin Page - 444kuda</title>
   </head>
   <body>
-    <h1>Welcome to Admin Page</h1>
-    <p>Admin Page</p>
+    <header>
+      <div class="logo">
+        <h1>Admin Page</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/orders">Orders</a></li>
+          <li><a href="/users">Users</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <form action="/<%= url %>/logout" method="post">
       <input type="submit" value="Logout" />
     </form>
+    <a href="/<%= url %>/add"
+      >Add new product for your page right now if u need so yeah ummm</a
+    >
   </body>
 </html>
