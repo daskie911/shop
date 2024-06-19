@@ -12,11 +12,12 @@ const loginRoutes = require("./routes/loginRoutes");
 const logOutRoutes = require("./routes/logOutRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 const adminRoutes = require("./routes/adminRoutes");
-// const productRoutes = require("./routes/productRoutes");
+const addProductRoutes = require("./routes/addProductRoutes");
 
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(__dirname + "/views"));
 app.use(
   session({
@@ -32,7 +33,7 @@ app.use("/login", loginRoutes);
 app.use("/logout", logOutRoutes);
 app.use("/profile", profileRoutes);
 app.use(`/${process.env.URL_ADMIN}`, adminRoutes);
-// app.use("/product", productRoutes);
+app.use(`/${process.env.URL_ADMIN}`, addProductRoutes);
 
 const start = async () => {
   try {
