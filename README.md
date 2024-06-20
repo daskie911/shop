@@ -18,6 +18,7 @@ This project is a web application for a Roblox clothes shop named "444kuda". The
 
 - Node.js
 - MongoDB
+- Express.js
 
 ### Steps
 
@@ -40,6 +41,7 @@ This project is a web application for a Roblox clothes shop named "444kuda". The
    DB_URL=<your-mongodb-connection-string>
    USERNAME=<your-session-secret-username>
    URL_ADMIN=admin
+   ADMIN_PASSWORD="password"
    ```
 
 4. **Run the application**:
@@ -49,29 +51,7 @@ This project is a web application for a Roblox clothes shop named "444kuda". The
 
 5. **Open your browser** and navigate to `http://localhost:3000`.
 
-## File Structure
 
-### Main Files
-
-- **app.js**: Entry point of the application, sets up the server and routes.
-- **routes/**: Contains route handlers for different parts of the application.
-  - **homeRoutes.js**: Handles the homepage routes.
-  - **regRoutes.js**: Handles the registration routes.
-  - **loginRoutes.js**: Handles the login routes.
-  - **logOutRoutes.js**: Handles the logout routes.
-  - **profileRoutes.js**: Handles the profile routes.
-  - **adminRoutes.js**: Handles the admin routes.
-- **views/**: Contains the EJS templates for rendering HTML pages.
-  - **index.ejs**: Home page template.
-  - **login.ejs**: Login page template.
-  - **reg.ejs**: Registration page template.
-  - **profile.ejs**: Profile page template.
-  - **header.ejs**: Common header template included in other templates.
-- **models/Users.js**: Defines the user schema and model for MongoDB.
-
-### Additional Files
-
-- **assets/**: Contains static files like CSS and images used in the EJS templates.
 
 ## Explanation of Key Files
 

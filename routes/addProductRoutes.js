@@ -23,12 +23,6 @@ router.post("/add", async (req, res) => {
 
     const { name, price, description, image } = req.body;
 
-    if (!name || !price || !description || !image) {
-      return res.render("addProduct", {
-        error: "All fields are required",
-      });
-    }
-
     const product = new Product({
       name,
       price,
@@ -37,10 +31,10 @@ router.post("/add", async (req, res) => {
     });
 
     await product.save();
-    res.redirect("/");
+    return res.redirect("/");
   } catch (error) {
     console.log(error);
-    res.status(500).send("Internal Server Error");
+    return res.status(500).send("Internal Server Error");
   }
 });
 
